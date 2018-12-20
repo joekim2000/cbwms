@@ -1,0 +1,1 @@
+[{"model": "camodels.DataPolicy", "pk": 1, "fields": {"policyname": "자료전송", "company": "부산은행", "intransmissionpolicy": "1", "inreceptionpolicy": "1", "outtransmissionpolicy": "1", "outreceptionpolicy": "1", "pollingtime": "20", "securitylevel": "0", "jionupdate": "False", "systemupdate": "0", "userpasswordupdate": "0", "pcvaccine": "0"} }]

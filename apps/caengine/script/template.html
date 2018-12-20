@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>외부메일 레이아웃</title>
+	</head>
+
+ <body>
+	<div style="border-width:6px; min-width:810px; border-style:double; border-color:#3BB9FF; width:90%;">
+		<!-- 로고 div Deep Sky Blue-->
+		<div style="margin: 0px 0px 0px 0px; width:100%; height:90px; background-color:#FFFFFF;">
+			<img src="cid:logo" alt="" title="" style="float:left; margin: 22px 5px 22px 5px; width:180px; height:44px; ">
+			<h1 style="float:right; width:400px; height:50px; line-height:50px; color:#0000A0; font-size:12px; font-weight:normal; text-align:right;padding-right:25px; box-sizing:border-box;">
+				본 메일은 외부에서 발송된 메일입니다.
+			</h1>
+		</div>
+		<div style="margin: 0px 0px 0px 0px; width:100%; height:65px; background-color:#3BB9FF;">
+			<p style="padding-left:1px; color:#fff; font-size:1px; font-weight:normal; height:1px;">
+				   
+			</p>
+			<p style="padding-left:1px; color:#fff; font-size:5px; font-weight:normal; height:1px;">
+				   
+			</p>
+			<p style="padding-left:15px; margin: 0px 0px 0px 0px; line-height: 120%; color:#fff; font-size:13px; font-weight:normal; height:17px;">
+				· 전자금융감독규정 제15조에 의거 원본 메일은 업무PC와 분리된 인터넷 PC에서 확인해야 합니다.
+			</p>
+			<p style="padding-left:15px; margin: 8px 0px 8px 0px; color:#fff; font-size:13px; font-weight:normal; height:17px;">
+				· <b><u>첨부 파일이 있는 경우 : 인터넷 PC 에서 망연계 프로그램을 통해 반입 승인 신청 완료 후 내려받을 수 있습니다. </u></b>
+			</p>
+		</div>
+		<!-- //로고 div -->
+		<br />
+		<!-- 본문 div -->
+		<div>
+			<table>
+				<tr>
+					<td><!-- 본문이미지가 들어 갈 td -->
+						{{imgkey}}
+					</td><!-- 본문이미지가 들어 갈 td -->
+				</tr>
+			</table>
+		</div>
+		<!-- //본문 div -->
+
+		<!-- 첨부파일 div -->
+		<div>
+			<p  style="padding-left:10px; font-size:15px; color:#404040; height:17px; line-height:30px; margin-top:10px;">
+				첨부파일
+			</p>
+			<table>
+				{{filekey}}
+			</table>
+			<!--<input type="button" value="승인요청" onclick="href='http://google.com'">
+			<input type="button" a href="popup:http://stackoverflow.com">Stackoverflow Popup</a>
+			<a href="#" target="_blank" onClick="MM_openBrWindow('http://www.naver.com','','scrollbars=yes,width=414,height=200')">승인요청</a>
+			<a href="http://www.google.com">승인요청</a>
+			<input type="button" id="hw" value="승인요청" />
+			<script type="text/javascript">
+				var hw = document.getElementById('hw');
+				hw.addEventListener('click', function(){
+			        alert('승인을 요청 합니다.');
+		        })
+			</script>-->
+			<!--<input type="button" name="버튼" value="승인요청" onclick="http://www.cginjs.com";>-->
+			<p style="padding-left:55px; font-size:1px; font-weight:bold; height:5px; line-height:5px; margin-top:5px; color:#fff;">
+				 
+			</p>
+		</div>
+		<!-- //첨부파일 div -->
+
+		<!-- 공지사항 div -->
+		<!-- 공지사항을 html로 만든 부분 -->
+		<div style="margin: 0px 0px 0px 0px; width:100%; height:180px; background-color:#3BB9FF;">
+			<p style="padding-left:55px; font-size:1px; font-weight:bold; height:1px; line-height:1px; margin-top:1px; color:#fff;">
+				 
+			</p>
+			<p style="padding-left:55px; font-size:15px; font-weight:bold; height:15px; line-height:25px; margin-top:10px; color:#fff;">
+				공지사항
+			</p>
+			<p style="margin: 8px 0px 8px 0px; padding-left:85px; font-size:13px; height:17px; line-height:30px; margin-top:10px; color:#fff;">
+				1. 인터넷PC에서 메일 전체를 확인하는 방법
+			</p>
+			<p style="margin: 8px 0px 8px 0px; padding-left:105px; font-size:13px; height:17px; line-height:30px; color:#fff;">
+				① 인터넷PC접속 : 메일 접속 후 확인
+			</p>
+			<p style="margin: 8px 0px 8px 0px; padding-left:85px;font-size:13px; height:17px; line-height:30px; margin-top:10px; color:#fff;">
+				2. 첨부파일을 업무용PC로 옮기는 방법
+			</p>
+			<p style="margin: 8px 0px 8px 0px; padding-left:105px; font-size:13px; height:17px; line-height:30px; color:#fff;">
+				① 반입신청 : 신청직원 인터넷PC &rarr; 외부메일 파일 다운로드 &rarr; 망연계 파일전송 프로그램 반입 승인신청
+			</p>
+			<p style="margin: 8px 0px 8px 0px; padding-left:105px; font-size:13px; height:17px; line-height:30px; color:#fff;">
+				② 다운로드 : 신청직원 업무용PC &rarr; 망연계 파일전송 프로그램 이용 &rarr; 승인문서 확인 &rarr; 파일 다운로드
+			</p>
+			<!-- 공지사항을 이미지로 넣은 부분 -->
+			<!--table>
+				<tr>
+					<td>a
+						<img src="cid:notice" alt="" title="">
+					</td>
+				</tr>
+			</table-->
+		</div>
+		<!-- //공지사항 div -->
+	</div>
+ </body>
+</html>

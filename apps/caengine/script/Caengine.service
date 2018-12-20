@@ -1,0 +1,16 @@
+#
+# Caengine.service - Feb 24, 2017
+#
+
+[Unit]
+Description=Caengine Daemons
+ConditionFileIsExecutable=/opt/JionLab/caengine/bin/Caengine.sh
+
+[Service]
+Type=idle
+ExecStart=/bin/sh -c '/opt/JionLab/caengine/bin/Caengine.sh start'
+ExecStop=/bin/sh -c '/opt/JionLab/caengine/bin/Caengine.sh stop'
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

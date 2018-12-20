@@ -1,0 +1,31 @@
+from __future__ import absolute_import
+
+import os
+
+from celery import Celery
+from celery.schedules import crontab
+
+
+from django.conf import settings
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'cbwms.settings.development')
+import django
+django.setup()
+
+app = Celery('cbwms',       # 현재 프로젝트의 이름
+            broker='redis://localhost:6379')  # broker: 브로커에 접속할 수 있는 URL을 설정.
+
+app.config_from_object('django.conf:settings')
+app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
+app.conf.update(
+    CELERYBEAT_SCHEDULE = {
+        'apps.caengine.tasks.checkaccounts.personnel-every-three-minutes': {
+            'task': 'apps.caengine.tasks.checkaccounts',
+            'schedule': crontab(hour=0, minute=1, day_of_week=0),
+            'args': ()
+        },
+    },
+    BROKER_URL='redis://localhost:6379',
+    RESULT_BACKEND = 'mysql://secuadmin:secuqhdks87!@localhost/CBWMSDB',
+#
+)

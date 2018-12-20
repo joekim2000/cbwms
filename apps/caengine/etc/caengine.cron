@@ -1,0 +1,15 @@
+#
+# caengine.cron - Jun 23, 2016
+#
+# [minute] [hour] [day of month] [month] [day of week]
+#
+# minute	0-59
+# hour		0-23
+# day of month	1-31
+# month		1-12
+# day of week	0-7 (0 or 7 is Sun)
+#
+
+##0 5 * * *	/opt/JionLab/caengine/bin/tick.py > /dev/null 2>&1
+##30 4 * * *	/opt/JionLab/caengine/bin/caenginebackup.py > /dev/null 2>&1
+##50 5 * * *	/opt/JionLab/caengine/bin/caengineretention.py > /dev/null 2>&1
